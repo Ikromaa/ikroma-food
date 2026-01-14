@@ -21,7 +21,8 @@ const __dirname = path.dirname(__filename);
 // MIDLEWARE
 app.use(cors({
     origin: (origin,callback) => {
-        const allowedOrigins = ['http://localhost:5173','http://localhost:5174','https://garnet-tsunamic-blotchily.ngrok-free.dev',];
+        const allowedOrigins = [//'http://localhost:5173','http://localhost:5174',
+            'https://ikroma-frontend.vercel.app','https://garnet-tsunamic-blotchily.ngrok-free.dev',];
         if(!origin || allowedOrigins.includes(origin)) {
             callback(null,true)
         }
